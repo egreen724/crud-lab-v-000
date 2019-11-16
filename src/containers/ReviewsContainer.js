@@ -6,7 +6,6 @@ import { connect } from 'react-redux'
 class ReviewsContainer extends Component {
 
   render() {
-    debugger;
     return (
 
       <div>
