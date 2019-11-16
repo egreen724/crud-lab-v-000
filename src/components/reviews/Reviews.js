@@ -3,9 +3,15 @@ import Review from './Review';
 
 class Reviews extends Component {
   render() {
+    debugger;
+
+    const { reviews, restaurantId, deleteReview } = this.props;
+    const specificReviews = reviews.filter(review => review.restaurantId === restaurantId)
     return (
       <ul>
-        Reviews
+        {specificReviews.map((review, index) =>
+          return <Review key={index} review={review} deleteReview={deleteReview}/>
+        )}
       </ul>
     );
   }
